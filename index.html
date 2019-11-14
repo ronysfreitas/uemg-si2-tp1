@@ -1,0 +1,89 @@
+﻿<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>RN - Tabuada Verdade</title>
+	<link rel="stylesheet" href="css/bootstrap@4.3.1.min.css">
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-sm bg-success">
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<strong class="nav-link text-white">
+					RN - Tabuada Verdade
+				</strong>
+			</li>
+		</ul>
+	</nav>
+	<br>
+	<div class="container">
+
+		<img src="img/binary.png" width="7%" style="float: right;">
+
+		<h2>Tabuada Verdade! Rede Neural! JavaScript!</h2>
+
+		<p class="text-justify">Rede Neural criada com a biblioteca JavaScript TensorFlow.js afim de criar uma
+			Inteligência Artificial que resolva a Tabuada Verdade com a entrada de dois números binários. Escolha
+			uma taxa de erro, treine a rede e entre com dois binarios e veja o resultado:</p>
+
+		<div class="row">
+			<div class="col-6">
+				<input type="number" min="0" max="1" step="1" id="entradaX" class="form-control"
+					placeholder="Entrada 1" /><br>
+				<input type="number" min="0" max="1" step="1" id="entradaY" class="form-control"
+					placeholder="Entrada 2" /><br>
+
+				<button id="btnExecutar" class="btn btn-lg btn-success">Predição</button>
+
+			</div>
+			<div class="col-6">
+				<input type="number" value="0.2" id="taxa" class="form-control" placeholder="Taxa de Erro" /><br>
+
+				<input type="number" value="5000" id="iteracoes" class="form-control"
+					placeholder="Número de Iterações" /><br>
+
+				<button id="btnTreinar" class="btn btn-primary">Treinar</button>
+				<button id="btnHistory" class="btn btn-primary invisible">Dados</button>
+				<div align="right">Erro: <span id="erro">##.#####</span> %</div>
+				<div align="right">Status: <span id="status">Não Treinado</span></div>
+			</div>
+		</div>
+
+		<br><br>
+
+		<div id="divResultado" class="ainvisible text-center">
+			<table class="table table-hover">
+				<caption>Tabuada Verdade para as entradas...</caption>
+				<thead class="thead-dark">
+					<tr>
+						<th>E</th>
+						<th>OU</th>
+						<th>OU EXCLUSIVO</th>
+						<th>SE...ENTÃO</th>
+						<th>SE...SOMENTE SE</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td id="tv1">#</td>
+						<td id="tv2">#</td>
+						<td id="tv3">#</td>
+						<td id="tv4">#</td>
+						<td id="tv5">#</td>
+					</tr>
+				</tbody>
+
+			</table>
+		</div>
+
+	</div>
+
+	<script src="js/tfjs@1.3.1.min.js"></script>
+	<script src="js/tfjs-vis.js"></script>
+	<script src="js/index.js"></script>
+
+</body>
+
+</html>
